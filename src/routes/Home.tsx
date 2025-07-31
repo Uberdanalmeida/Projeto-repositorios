@@ -17,11 +17,14 @@ function Home() {
             seguidores,
             seguindo
         }
+
+        setUser(userData)
     }
 
     return(
         <div>
             <Search loadUser = {loadUser}></Search>
+            {user && <p>{user.login}</p>}
         </div>
     )
 }
